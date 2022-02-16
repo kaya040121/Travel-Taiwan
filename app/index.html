@@ -1,0 +1,344 @@
+---
+title: Travel Taiwan
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<!-- Swiper -->
+<div class="swiper mySwiper mb-13 mb-md-21">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="./assets/images/banner-01.jpg" alt="hero-01">
+    </div>
+    <div class="swiper-slide">
+      <img src="./assets/images/banner-02.jpg" alt="hero-02">
+    </div>
+    <div class="swiper-slide">
+      <img src="./assets/images/banner-03.jpg" alt="hero-03">
+    </div>
+    <div class="swiper-slide">
+      <img src="./assets/images/banner-04.jpg" alt="hero-04">
+    </div>
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="header position-absolute top-50 start-50 translate-middle">
+    <div class="d-flex flex-column justify-content-center" style="height: 599px;">
+      <h1 class="text-center text-white text-shadow text-nowrap fst-italic mb-7">Welcome to Travel Taiwan</h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <select class="form-select js-categorySelect w-25 me-3 text-center text-info fs-6"
+          aria-label="Default select example">
+          <option selected value="所有類別">所有類別</option>
+          <option value="自然風景">自然風景</option>
+          <option value="體育健身">體育健身</option>
+          <option value="遊憩類">遊憩類</option>
+          <option value="古蹟類">古蹟類</option>
+        </select>
+        <select class="form-select js-citySelect w-35 me-3 text-center text-info fs-6"
+          aria-label="Default select example">
+          <option selected value="所有縣市">所有縣市</option>
+          <option value="Taipei">臺北市</option>
+          <option value="NewTaipei">新北市</option>
+          <option value="Taoyuan">桃園市</option>
+          <option value="Taichung">臺中市</option>
+          <option value="Tainan">臺南市</option>
+          <option value="Kaohsiung">高雄市</option>
+          <option value="Keelung">基隆市</option>
+          <option value="Hsinchu">新竹市</option>
+          <option value="HsinchuCounty">新竹縣</option>
+          <option value="MiaoliCounty">苗栗縣</option>
+          <option value="ChanghuaCounty">彰化縣</option>
+          <option value="NantouCounty">南投縣</option>
+          <option value="YunlinCounty">雲林縣</option>
+          <option value="ChiayiCounty">嘉義縣</option>
+          <option value="Chiayi">嘉義市</option>
+          <option value="PingtungCounty">屏東縣</option>
+          <option value="YilanCounty">宜蘭縣</option>
+          <option value="HualienCounty">花蓮縣</option>
+          <option value="TaitungCounty">臺東縣</option>
+          <option value="KinmenCounty">金門縣</option>
+          <option value="PenghuCounty">澎湖縣</option>
+          <option value="LienchiangCounty">連江縣</option>
+        </select>
+        <button type="button" class="btn btn-primary text-white js-search">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- hero -->
+<!-- <div class="hero mb-21 d-md-none">
+      <div class="container">
+        <div class="d-flex flex-column justify-content-center" style="height: 599px;">
+          <h1 class="text-center text-white text-shadow text-nowrap fst-italic mb-7">Welcome to Travel Taiwan</h1>
+          <div class="d-flex justify-content-center align-items-center">
+            <select class="form-select w-25 me-3 text-center text-info fs-6" aria-label="Default select example">
+              <option selected>類別</option>
+              <option value="所有類別">所有類別</option>
+              <option value="自然風景">自然風景</option>
+              <option value="體育健身">體育健身</option>
+              <option value="遊憩類">遊憩類</option>
+              <option value="古蹟類">古蹟類</option>
+            </select>
+            <select class="form-select w-35 me-3 text-center text-info fs-6" aria-label="Default select example">
+              <option selected>所有縣市</option>
+              <option value="所有縣市">所有縣市</option>
+              <option value="臺北市">臺北市</option>
+              <option value="新北市">新北市</option>
+              <option value="桃園市">桃園市</option>
+              <option value="臺中市">臺中市</option>
+              <option value="臺南市">臺南市</option>
+              <option value="高雄市">高雄市</option>
+            </select>
+            <button type="button" class="btn btn-primary text-white">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+<!-- popular -->
+<section class="popular">
+  <div class="container">
+    <h3 class="text-primary fw-bold mb-7">熱門景點</h3>
+    <p class="text-light fw-bold fs-5 mb-13">台灣的各個美景，都美不勝收。<br>
+      等你一同來發現這座寶島的奧妙！</p>
+    <ul class="row js-popularList">
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-01.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">正濱漁港懷舊碼頭</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i
+                  class="far fa-clock me-1"></i>全天候開放全天候開放全天候開放全天候開放全天候開放全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-02.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">阿里山日出</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-03.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">臺南奇美博物館</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-04.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">宜蘭礁溪溫泉</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-05.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">正濱漁港懷舊碼頭</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i
+                  class="far fa-clock me-1"></i>全天候開放全天候開放全天候開放全天候開放全天候開放全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-06.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">阿里山日出</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-08.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">臺南奇美博物館</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+      <li class="col-lg-3 mb-18">
+        <div class="card shadow" style="height: 100%;">
+          <img src="./assets/images/card-img-10.jpg" class="card-img-top" alt="...">
+          <div class="card-body pt-9 pb-7 d-flex flex-column">
+            <h4 class="card-title mb-4 fw-bold text-nowrap me-1">宜蘭礁溪溫泉</h5>
+              <p class="card-text text-info fw-light font-size-xxs"><i class="far fa-clock me-1"></i>全天候開放</p>
+              <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-1"></i>臺東縣951綠島鄉
+              </p>
+              <div class="d-grid col-8 mx-auto mt-auto">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary border-4 fw-bold fs-6 text-nowrap"
+                  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  了解更多
+                </button>
+              </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold fs-4" id="exampleModalLabel">紫坪</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-4 text-info fs-5"><i class="fas fa-map-marker-alt text-primary me-2 fs-6"></i>臺東縣951綠島鄉溫泉路256號
+        </p>
+        <p class="mb-4 text-info fs-5">
+          紫坪位在綠島最南方，從附近的步道，可通往海岸邊的潟湖。此處是由珊瑚礁構成的潮池，也是綠島著名的潟湖所在地，有全綠島最完整的潟湖地形以及珊瑚礁植群，更有茂盛的植物水芫花和珍貴的陸寄居蟹。</p>
+        <p class="text-end mb-4 text-primary fs-5"><i class="fas fa-file-image text-primary me-2 fs-5"></i>相片（12）<i
+            class="fas fa-angle-right"></i></p>
+        <img src="./assets/images/card-img-12.jpg" alt="">
+        <div class="d-flex mt-12 mb-16">
+          <p class="text-primary fw-light text-nowrap me-4"><i class="far fa-clock me-2"></i>全天候開放</p>
+          <p class="text-primary fw-light text-nowrap me-4"><i class="fas fa-ticket-alt me-2"></i>免費入場</p>
+          <p class="text-primary fw-light text-nowrap me-4"><i class="fas fa-phone-alt me-2"></i>02-1154-7789
+          </p>
+          <p class="text-primary fw-light text-nowrap me-4"><i class="fas fa-list-ul me-2"></i>自然風景類</p>
+        </div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- activities -->
+<section class="activities mb-17">
+  <div class="container">
+    <div class="row">
+      <h3 class="text-primary fw-bold mb-7">活動類別</h3>
+      <p class="text-light fw-bold fs-5 mb-13">各種不同的活動內容<br>
+        邀請您一銅來共襄盛舉！</p>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center">
+          <a href="./activities.html"><img src="./assets/images/category-01.jpg"
+              class="object-cover shadow border-radius-lg mb-7" alt="年度活動" style="height: 328px; width: 255px;"></a>
+          <p class="fw-bold fs-4 mb-9">年度活動</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center">
+          <a href="./activities.html"><img src="./assets/images/category-02.jpg"
+              class="object-cover shadow border-radius-lg mb-7" alt="藝文活動" style="height: 328px; width: 255px;"></a>
+          <p class="fw-bold fs-4 mb-9">藝文活動</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center">
+          <a href="./activities.html"><img src="./assets/images/category-03.jpg"
+              class="object-cover shadow border-radius-lg mb-7" alt="節慶活動" style="height: 328px; width: 255px;"></a>
+          <p class="fw-bold fs-4 mb-9">節慶活動</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center">
+          <a href="./activities.html"><img src="./assets/images/category-04.jpg"
+              class="object-cover shadow border-radius-lg mb-7" alt="其他" style="height: 328px; width: 255px;"></a>
+          <p class="fw-bold fs-4 mb-9">其他</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- back-cover -->
+<section class="back-cover">
+  <div class="container">
+    <div class="d-flex flex-column justify-content-center position-relative" style="height:332px;">
+      <h2 class="text-center text-white text-shadow">“To travel is to live” <br>
+        – Hans Christian Anderson-
+      </h2>
+      <!-- from to top -->
+      <div class="position-relative">
+        <div class="position-absolute top-50 end-0 translate-middle-y">
+          <a href="#"><i class="fas fa-chevron-circle-up text-primary fs-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
