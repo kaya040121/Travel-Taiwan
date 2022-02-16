@@ -1,10 +1,57 @@
----
-title: Travel Taiwan
-layout: ./app/layout.ejs
-engine: ejs
-current: activities
----
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+    Travel Taiwan
+  </title>
+  <!-- icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/style/bootstrap.css">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <header class="bg-white">
+    <div class="container">
+      <!-- nav -->
+      <nav class="navbar-white bg-white pt-7 pb-7">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center flex-md-row justify-content-md-between">
+            <a class="navbar-brand pb-6 pb-md-0" href="./index.html">
+              <img class="align-text-bottom"
+                src="data:image/png;base64,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"
+                alt="Travel Taiwan Logo">
+              <span class="fw-bold text-primary fst-italic">Travel Taiwan</span>
+            </a>
+            <ul class="menu d-flex justify-content-between">
+              <li class="ps-10 pe-10 ps-md-8 pe-md-8">
+                <a class="text-secondary" href="./index.html">首頁</a>
+              </li>
+              <li class="ps-10 pe-10 ps-md-8 pe-md-8">
+                <a class="text-secondary" href="./attractions.html">景點導覽</a>
+              </li>
+              <li class="ps-10 pe-10 ps-md-8 pe-md-8">
+                <a class="text-secondary" href="./activities.html">觀光活動</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  
 <!-- Swiper -->
 <div class="swiper mySwiper mb-13 mb-md-21">
     <div class="swiper-wrapper">
@@ -327,3 +374,23 @@ current: activities
         <li class="page-item"><a class="page-link" href="#">4</a></li>
     </ul>
 </nav>
+
+    <footer class="footer bg-primary text-white fs-4">
+      <div class="container">
+        <h4 class="text-center pt-13 pb-13">CopyRight : Travel Taiwan Design By : Tracy</h4>
+      </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js"></script>
+    <!-- sha.js (針對發出的請求做加解密)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"></script>
+    <!-- 第三方 js 套件 -->
+    <script src="./assets/js/vendors.js"></script>
+    <!-- all.js -->
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
